@@ -1,0 +1,33 @@
+<div class="row sub-header">
+    <h3>Страницы</h3>
+    <a ui-sref="extension.page.create"  href="" class="btn btn-success pull-right">
+        <i class="fa fa-plus"></i>
+        Добавить
+    </a>
+</div>
+<div class="row">
+    <table class="table table-hover">
+        <tr>
+            <th class="col-sm-6">Заголовок</th>
+            <th class="col-sm-2"></th>
+            <th class="col-sm-2"></th>
+            <th class="col-sm-2"></th>
+        </tr>
+        <tr ng-repeat="page in pages">
+            <td>
+                <span ng-bind="page.title"></span>
+            </td>
+            <td>
+            </td>
+            <td>
+            </td>
+            <td>
+                <div class="btn-group">
+                    <a class="btn btn-info btn-xs" href="#" ui-sref="extension.page.update({id: page.id})">Редактировать</a>
+                    <button class="btn btn-danger btn-xs" ng-click="onPageRemoveClick(page)">Удалить</button>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <div bc-pagination total="pagination.totalPages" size="pagination.perPage" current="pagination.current" on-select="onSelectPage(page)"></div>
+</div>

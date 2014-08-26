@@ -1,0 +1,1 @@
+"use strict";var PageServiceProvider=Class.extend({$get:["$resource",function(e){var r="/api/extension/Page";return e(r+"/:id",null,{update:{method:"PUT"}})}]});angular.module("bincms.rest").provider("$pageService",PageServiceProvider);
