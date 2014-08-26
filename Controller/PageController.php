@@ -2,6 +2,7 @@
 
 namespace Extension\Page\Controller;
 
+use BinCMS\Annotations\Route;
 use BinCMS\Application;
 use BinCMS\Converter\ConverterService;
 use BinCMS\FilterBuilder\FilterBuilder;
