@@ -89,7 +89,7 @@ class PageController
         $page = $this->pageRepository->find($id);
 
         if(null == $page) {
-            return $app->abort(404);
+            $app->abort(404);
         }
 
         return $app->json(
@@ -208,7 +208,7 @@ class PageController
         $page = $this->pageRepository->find($id);
 
         if(null === $page) {
-            throw new \RuntimeException('Page not found');
+            $app->abort(404);
         }
 
         $this->pageRepository->removeAndFlushEntity($page);

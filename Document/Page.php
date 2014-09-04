@@ -7,7 +7,6 @@ use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ODM\MongoDB\Mapping\Annotations as MongoDB;
 use Gedmo\Mapping\Annotation as Gedmo;
 use Gedmo\Translatable\Translatable;
-use Extension\User\Document\User;
 
 /**
  * @MongoDB\Document(repositoryClass="Extension\Page\Repository\PageRepository")
@@ -49,7 +48,7 @@ class Page implements Translatable
     protected $locale;
 
     /**
-     * @MongoDB\ReferenceOne(targetDocument="Extension\User\Document\User")
+     * @MongoDB\ReferenceOne(targetDocument="BinCMS\Document\User")
      */
     protected $author;
 
