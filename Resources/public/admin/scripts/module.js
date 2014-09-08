@@ -32,7 +32,7 @@ angular.adminModule('page', [
                 url: '/list',
                 views: {
                     'content@layout': {
-                        templateUrl: 'admin/page/list.html',
+                        templateUrl: '/admin/page/list.html',
                         controller: 'PageListExtensionController'
                     }
                 }
@@ -41,7 +41,7 @@ angular.adminModule('page', [
                 url: '/create',
                 views: {
                     'content@layout': {
-                        templateUrl: 'admin/page/create.html',
+                        templateUrl: '/admin/page/create.html',
                         controller: 'PageCreateExtensionController'
                     }
                 }
@@ -50,7 +50,7 @@ angular.adminModule('page', [
                 url: '/update/:id',
                 views: {
                     'content@layout': {
-                        templateUrl: 'admin/page/update.html',
+                        templateUrl: '/admin/page/update.html',
                         controller: 'PageUpdateExtensionController',
                         resolve: {
                             page: ['$pageService', '$stateParams', function (pageService, stateParams) {
